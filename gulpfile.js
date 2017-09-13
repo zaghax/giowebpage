@@ -39,7 +39,7 @@ gulp.task('sass', function(){
 });
 
 gulp.task('js', function(){
-  return gulp.src(['srcjs/jquery.js'])
+  return gulp.src(['srcjs/plugins.js' , 'srcjs/custom.js'])
              .pipe(concat('main.js'))
              .pipe(uglify())
              .pipe(gulp.dest('js/'))
