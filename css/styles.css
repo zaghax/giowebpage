@@ -1,0 +1,20 @@
+/* line 7, sass/styles.sass */
+body {
+  background: black;
+}
+
+/* line 10, sass/styles.sass */
+h1 {
+  font-size: 40px;
+  color: red;
+  border-radius: 30px;
+  -webkit-transition: all 4s ease;
+  transition: all 4s ease;
+}
+
+@media (max-width: 768px) {
+  /* line 10, sass/styles.sass */
+  h1 {
+    color: white;
+  }
+}

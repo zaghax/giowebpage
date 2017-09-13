@@ -1,0 +1,34 @@
+{
+  "name": "giowebpage",
+  "version": "1.0.0",
+  "description": "This is the sourcecode of my web page",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zaghax/giowebpage.git"
+  },
+  "keywords": [
+    "Front",
+    "End",
+    "Developer"
+  ],
+  "author": "Giovanni Ortega Arias giortega@giorttega.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaghax/giowebpage/issues"
+  },
+  "homepage": "https://github.com/zaghax/giowebpage#readme",
+  "dependencies": {
+    "autoprefixer": "^7.1.4",
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}

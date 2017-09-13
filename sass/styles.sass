@@ -1,0 +1,16 @@
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint"
+
+
+
+$phone: max-width 768px
+
+body
+	background: black
+
+h1
+	font-size: 40px
+	color: red
+	border-radius: 30px
+	transition: all 4s ease
+	+breakpoint($phone)
+		color: white
