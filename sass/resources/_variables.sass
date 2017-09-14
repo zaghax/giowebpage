@@ -1,0 +1,41 @@
+// FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700')
+
+
+$jos: 'Josefin Sans', sans-serif
+
+// COLORS 
+
+$white: #FFF
+$black: #000
+$green: #AFDD22
+
+
+
+// BREAKPOINTS
+
+$phone: max-width 768px
+
+// FUNCTIONS
+
+@function toRem($sizeValue)
+	$remy: ($sizeValue / 16)+rem
+	@return $remy
+
+//Funcion PX to VW Desktop
+
+@function toVW($target) 
+	$vw-context: (1920 * 0.01) * 1
+	@return ($target / $vw-context) * 1vw
+
+//Funcion PX to VW Movil
+
+@function toVWM($target) 
+	$vw-context: (320 * 0.01) * 1
+	@return ($target / $vw-context) * 1vw
+
+// Mixin Transition
+
+=transition($time)// in ms
+	transition: all $time cubic-bezier(0.250, 0.250, 0.750, 0.750)

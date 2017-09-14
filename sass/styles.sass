@@ -1,21 +1,7 @@
 @import "../node_modules/breakpoint-sass/stylesheets/breakpoint"
 
+@import "resources/_variables.sass"
+@import "resources/_reset.sass"
+@import "partials/_general.sass"
 
 
-$phone: max-width 768px
-
-body
-	background: black
-
-h1
-	font-size: 40px
-	color: red
-	border-radius: 30px
-	transition: all 4s ease
-	+breakpoint($phone)
-		color: white
-
-.logo
-	width: 20%
-	display: block
-	margin: 0 auto
