@@ -214,12 +214,34 @@ iframe {
   }
 }
 
-/* line 43, sass/partials/_general.sass */
+@-webkit-keyframes toTOP {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes toTOP {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+/* line 50, sass/partials/_general.sass */
 body {
   background: #000;
 }
 
-/* line 53, sass/partials/_general.sass */
+/* line 60, sass/partials/_general.sass */
 .logo {
   width: 4.16667vw;
   margin: 1.04167vw;
@@ -230,7 +252,7 @@ body {
   z-index: 1;
 }
 
-/* line 61, sass/partials/_general.sass */
+/* line 68, sass/partials/_general.sass */
 .logo .name {
   display: block;
   text-align: center;
@@ -243,6 +265,15 @@ body {
 }
 
 /* line 78, sass/partials/_general.sass */
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 85, sass/partials/_general.sass */
 #particles-js {
   position: fixed;
   width: 100%;
@@ -252,87 +283,229 @@ body {
   z-index: 0;
 }
 
-/* line 91, sass/partials/_general.sass */
+/* line 98, sass/partials/_general.sass */
 .opening .logo-content {
   -webkit-perspective: 20.83333vw;
           perspective: 20.83333vw;
   width: 26.04167vw;
   display: block;
   margin: 0 auto;
+  -webkit-transform: translateY(calc(50vh - 9.84375vw));
+          transform: translateY(calc(50vh - 9.84375vw));
 }
 
-/* line 97, sass/partials/_general.sass */
+/* line 106, sass/partials/_general.sass */
 .opening .logo-content .logo-animated {
   width: 26.04167vw;
   display: block;
   margin: 0 auto;
-  margin-top: calc(50vh - 9.84375vw);
   -webkit-animation: rotateLogo 5s infinite ease-in-out;
           animation: rotateLogo 5s infinite ease-in-out;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
 
-/* line 106, sass/partials/_general.sass */
+/* line 114, sass/partials/_general.sass */
 .opening .logo-content .logo-animated .st1 {
-  stroke-width: 0.3px;
+  stroke-width: 0.4px;
   stroke: #fff;
   stroke-dasharray: 908;
   -webkit-animation: linesA 1.5s ease-in-out;
           animation: linesA 1.5s ease-in-out;
 }
 
-/* line 113, sass/partials/_general.sass */
+/* line 121, sass/partials/_general.sass */
 .opening .logo-content .logo-animated .st2 {
-  stroke-width: 0.3px;
+  stroke-width: 0.4px;
   stroke: #AFDD22;
   stroke-dasharray: 310;
   -webkit-animation: lineB 1.5s ease-in-out;
           animation: lineB 1.5s ease-in-out;
 }
 
-/* line 120, sass/partials/_general.sass */
+/* line 128, sass/partials/_general.sass */
 .opening .logo-content .logo-animated .st3 {
-  stroke-width: 0.3px;
+  stroke-width: 0.4px;
   stroke: #AFDD22;
   stroke-dasharray: 520;
   -webkit-animation: lineC 1.5s ease-in-out;
           animation: lineC 1.5s ease-in-out;
 }
 
-/* line 130, sass/partials/_general.sass */
+/* line 134, sass/partials/_general.sass */
+.opening .logo-content h1.title {
+  color: #FFF;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 100;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+/* line 150, sass/partials/_general.sass */
 .menu {
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 1;
+  -webkit-animation: toTOP 1s ease-in-out;
+          animation: toTOP 1s ease-in-out;
 }
 
-/* line 136, sass/partials/_general.sass */
+/* line 157, sass/partials/_general.sass */
 .menu .wrap {
-  width: 50%;
+  width: 30%;
   display: block;
-  margin: 0 auto;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-align: center;
-  background: rgba(26, 26, 26, 0.8);
+  background: rgba(90, 90, 90, 0.8);
   cursor: pointer;
   position: relative;
+  float: right;
 }
 
-/* line 149, sass/partials/_general.sass */
+/* line 170, sass/partials/_general.sass */
 .menu .wrap ul li {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* line 173, sass/partials/_general.sass */
+.menu .wrap ul li a {
   width: 60px;
   height: 60px;
   padding: 10px;
+  display: block;
+  position: relative;
 }
 
-/* line 155, sass/partials/_general.sass */
-.menu .wrap ul li svg {
+/* line 179, sass/partials/_general.sass */
+.menu .wrap ul li a svg {
   width: 100%;
   height: auto;
+}
+
+/* line 182, sass/partials/_general.sass */
+.menu .wrap ul li a .mouse-icon,
+.menu .wrap ul li a .about-icon,
+.menu .wrap ul li a .home-icon,
+.menu .wrap ul li a .skill-icon,
+.menu .wrap ul li a .email-icon {
+  position: relative;
+  z-index: 1;
+  fill: none;
+  stroke: #AFDD22;
+  stroke-width: 5px;
+  stroke-linecap: round;
+}
+
+/* line 195, sass/partials/_general.sass */
+.menu .wrap ul li a .mouse-icon .m1 {
+  stroke-dasharray: 400px;
+  -webkit-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 198, sass/partials/_general.sass */
+.menu .wrap ul li a .mouse-icon .m2 {
+  stroke-dasharray: 45px;
+  -webkit-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 203, sass/partials/_general.sass */
+.menu .wrap ul li a .about-icon .a1 {
+  stroke-dasharray: 450px;
+  -webkit-transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 208, sass/partials/_general.sass */
+.menu .wrap ul li a .home-icon .h1 {
+  stroke-dasharray: 130px;
+  -webkit-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 211, sass/partials/_general.sass */
+.menu .wrap ul li a .home-icon .h2 {
+  stroke-dasharray: 460px;
+  -webkit-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 216, sass/partials/_general.sass */
+.menu .wrap ul li a .skill-icon .sk1 {
+  stroke-dasharray: 453px;
+  -webkit-transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 221, sass/partials/_general.sass */
+.menu .wrap ul li a .email-icon .e1 {
+  stroke-dasharray: 718px;
+  -webkit-transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 225, sass/partials/_general.sass */
+.menu .wrap ul li a span {
+  opacity: 0;
+  color: #AFDD22;
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  font-weight: normal;
+  position: absolute;
+  z-index: 0;
+  top: calc(50% - 6px);
+  left: 0;
+  -webkit-transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+/* line 240, sass/partials/_general.sass */
+.menu .wrap ul li a:hover .mouse-icon .m1 {
+  stroke-dashoffset: 400px;
+}
+
+/* line 242, sass/partials/_general.sass */
+.menu .wrap ul li a:hover .mouse-icon .m2 {
+  stroke-dashoffset: 45px;
+}
+
+/* line 246, sass/partials/_general.sass */
+.menu .wrap ul li a:hover .about-icon .a1 {
+  stroke-dashoffset: 450px;
+}
+
+/* line 250, sass/partials/_general.sass */
+.menu .wrap ul li a:hover .home-icon .h1 {
+  stroke-dashoffset: 130px;
+}
+
+/* line 252, sass/partials/_general.sass */
+.menu .wrap ul li a:hover .home-icon .h2 {
+  stroke-dashoffset: 460px;
+}
+
+/* line 256, sass/partials/_general.sass */
+.menu .wrap ul li a:hover .skill-icon .sk1 {
+  stroke-dashoffset: 453px;
+}
+
+/* line 260, sass/partials/_general.sass */
+.menu .wrap ul li a:hover .email-icon .e1 {
+  stroke-dashoffset: 718px;
+}
+
+/* line 264, sass/partials/_general.sass */
+.menu .wrap ul li a:hover span {
+  opacity: 1;
 }
