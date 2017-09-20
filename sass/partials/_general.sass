@@ -49,7 +49,7 @@
 
 @keyframes toTOP
 	0%
-		transform: translateX(100%) 
+		transform: translateX(-100%) 
 	
 	100%
 		transform: translateX(0%)  
@@ -57,41 +57,146 @@
 body
 	background: #000 
 
-
-
-.logo
+header
+	width: toVW(100)
+	height: 100vh
 	position: fixed
+	top: 0 
 	left: 0
-	top: 0
+	border-right: 0.5px solid #252525
+	background: $black
 	z-index: 2
-	a
-		width: toVW(80)
-		margin: toVW(20)
-		display: block
-		position: relative
-		z-index: 1
-		
-	&:before
-		content: ''
-		display: block
+	transform: translateX(-100%) 
+	animation: toTOP .3s ease-in-out
+	animation-fill-mode: forwards
+	animation-delay: 2s 
+
+	.logo
 		position: absolute
 		left: 0
 		top: 0
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: toVW(230) toVW(230) toVW(0) toVW(0);
-		border-color: #aedd22 transparent transparent transparent;
-		opacity: 0.5
-		z-index: 0
+		z-index: 2
+		width: 100%
+		a
+			width: toVW(70)
+			margin: toVW(20) auto
+			display: block
+			position: relative
+			z-index: 1
+			
+		
+	.menu
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		width: 100%
 
+		ul	
+			display: block
+			li
+				display: block
+				a
+					width: toVW(80)
+					height: toVW(80)
+					padding: toVW(10)
+					display: block
+					margin: 0 auto
+					position: relative
+					svg
+						width: 100%
+						height: auto
+					.mouse-icon,
+					.about-icon,
+					.home-icon,
+					.skill-icon,
+					.email-icon
+						position: relative
+						z-index: 1
+						fill: none
+						stroke: $green
+						stroke-width: 3px
+						stroke-linecap: round
+
+					.mouse-icon
+						.m1
+							stroke-dasharray: 400px
+							+transition(200ms)
+						.m2
+							stroke-dasharray: 45px
+							+transition(200ms)
+
+					.about-icon
+						.a1
+							stroke-dasharray: 450px
+							+transition(250ms)
+
+					.home-icon
+						.h1
+							stroke-dasharray: 130px
+							+transition(200ms)
+						.h2
+							stroke-dasharray: 460px
+							+transition(200ms)
+
+					.skill-icon
+						.sk1
+							stroke-dasharray: 453px
+							+transition(250ms)
+
+					.email-icon
+						.e1
+							stroke-dasharray: 718px
+							+transition(250ms)
+						
+					span
+						opacity: 0
+						color: $green
+						font-size: toVW(16)
+						line-height: 1
+						display: block
+						width: 100%
+						text-align: center
+						font-weight: 300
+						position: absolute
+						z-index: 0
+						top: calc(50% - 8px)
+						left: 0
+						+transition(300ms)
+
+					&:hover
+						.mouse-icon
+							.m1
+								stroke-dashoffset: 400px
+							.m2
+								stroke-dashoffset: 45px
+
+						.about-icon
+							.a1
+								stroke-dashoffset: 450px
+
+						.home-icon
+							.h1
+								stroke-dashoffset: 130px
+							.h2
+								stroke-dashoffset: 460px
+
+						.skill-icon
+							.sk1
+								stroke-dashoffset: 453px
+
+						.email-icon
+							.e1
+								stroke-dashoffset: 718px
+						span
+							opacity: 1
 
 .logo-opening
 	perspective: toVW(400)
 	width: toVW(500)
 	display: block
 	margin: 0 auto
-	transform: translateY(calc(50vh - 9.84375vw))
+	transform: translateY(calc(50vh - 13.41146vw))
 	position: relative
 	z-index: 0
 
@@ -139,125 +244,26 @@ body
 		width: 100%
 		text-align: center
 		display: block
-		margin-top: 30px
-		font-size: toVW(38)
-		letter-spacing: 2px
+		margin-top: toVW(30)
+		font-size: toVW(51)
+		letter-spacing: toVW(3)
 		opacity: 0.5
-			
-.menu 
-	width: 100%
-	position: fixed
-	bottom: 0 
-	left: 0
-	z-index: 2
-	animation: toTOP 1s ease-in-out
-	.wrap
-		width: 30%
-		display: block
-		margin: 0 auto
-		border-top-left-radius: 5px
-		border-top-right-radius: 5px
+		border-bottom: 1px solid $white
+		padding-bottom: toVW(10)
+
+	h2.subtitle
+		color: $white
+		font-family: $jos
+		font-weight: 100
+		width: 100%
 		text-align: center
-		background: rgba(90, 90, 90, 0.8)
-		cursor: pointer
-		position: relative
+		display: block
+		margin-top: toVW(15)
+		font-size: toVW(30)
+		letter-spacing: toVW(8.1)
+		opacity: 0.5
 
-		ul
-			
-			li
-				display: inline-block
-				vertical-align:  middle
-				a
-					width: 60px
-					height: 60px
-					padding: 10px
-					display: block
-					position: relative
-					svg
-						width: 100%
-						height: auto
-					.mouse-icon,
-					.about-icon,
-					.home-icon,
-					.skill-icon,
-					.email-icon
-						position: relative
-						z-index: 1
-						fill: none
-						stroke: $green
-						stroke-width: 5px
-						stroke-linecap: round
 
-					.mouse-icon
-						.m1
-							stroke-dasharray: 400px
-							+transition(200ms)
-						.m2
-							stroke-dasharray: 45px
-							+transition(200ms)
-
-					.about-icon
-						.a1
-							stroke-dasharray: 450px
-							+transition(250ms)
-
-					.home-icon
-						.h1
-							stroke-dasharray: 130px
-							+transition(200ms)
-						.h2
-							stroke-dasharray: 460px
-							+transition(200ms)
-
-					.skill-icon
-						.sk1
-							stroke-dasharray: 453px
-							+transition(250ms)
-
-					.email-icon
-						.e1
-							stroke-dasharray: 718px
-							+transition(250ms)
-						
-					span
-						opacity: 0
-						color: $green
-						font-size: 12px
-						display: block
-						width: 100%
-						font-weight: normal
-						position: absolute
-						z-index: 0
-						top: calc(50% - 6px)
-						left: 0
-						+transition(300ms)
-
-					&:hover
-						.mouse-icon
-							.m1
-								stroke-dashoffset: 400px
-							.m2
-								stroke-dashoffset: 45px
-
-						.about-icon
-							.a1
-								stroke-dashoffset: 450px
-
-						.home-icon
-							.h1
-								stroke-dashoffset: 130px
-							.h2
-								stroke-dashoffset: 460px
-
-						.skill-icon
-							.sk1
-								stroke-dashoffset: 453px
-
-						.email-icon
-							.e1
-								stroke-dashoffset: 718px
-						span
-							opacity: 1
 
 
 .pages
