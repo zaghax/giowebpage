@@ -354,7 +354,7 @@ header .menu ul li a .email-icon {
   z-index: 1;
   fill: none;
   stroke: #AFDD22;
-  stroke-width: 3px;
+  stroke-width: 4px;
   stroke-linecap: round;
 }
 
@@ -416,7 +416,7 @@ header .menu ul li a span {
   display: block;
   width: 100%;
   text-align: center;
-  font-weight: 300;
+  font-weight: 600;
   position: absolute;
   z-index: 0;
   top: calc(50% - 8px);
@@ -466,6 +466,29 @@ header .menu ul li a:hover span {
 }
 
 /* line 194, sass/partials/_general.sass */
+.social-net {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* line 200, sass/partials/_general.sass */
+.social-net ul li a {
+  width: 4.16667vw;
+  height: 4.16667vw;
+  padding: 0.52083vw;
+  display: block;
+}
+
+/* line 206, sass/partials/_general.sass */
+.social-net ul li a svg path {
+  fill: none;
+  stroke: #AFDD22;
+  stroke-width: 20px;
+  stroke-linecap: round;
+}
+
+/* line 212, sass/partials/_general.sass */
 .logo-opening {
   -webkit-perspective: 20.83333vw;
           perspective: 20.83333vw;
@@ -478,7 +501,7 @@ header .menu ul li a:hover span {
   z-index: 0;
 }
 
-/* line 203, sass/partials/_general.sass */
+/* line 221, sass/partials/_general.sass */
 .logo-opening .logo-animated {
   width: 26.04167vw;
   display: block;
@@ -489,14 +512,14 @@ header .menu ul li a:hover span {
           animation-delay: 2.5s;
 }
 
-/* line 210, sass/partials/_general.sass */
+/* line 228, sass/partials/_general.sass */
 .logo-opening .logo-animated .st1,
 .logo-opening .logo-animated .st2,
 .logo-opening .logo-animated .st3 {
   stroke-width: 0.4px;
 }
 
-/* line 215, sass/partials/_general.sass */
+/* line 233, sass/partials/_general.sass */
 .logo-opening .logo-animated .st1 {
   stroke: #fff;
   stroke-dasharray: 908;
@@ -504,7 +527,7 @@ header .menu ul li a:hover span {
           animation: linesA 1.5s ease-in-out;
 }
 
-/* line 221, sass/partials/_general.sass */
+/* line 239, sass/partials/_general.sass */
 .logo-opening .logo-animated .st2 {
   stroke-dasharray: 310;
   -webkit-animation: lineB 1.5s ease-in-out , fillIn 1s linear;
@@ -515,14 +538,14 @@ header .menu ul li a:hover span {
           animation-delay: 0s , 1.6s;
 }
 
-/* line 228, sass/partials/_general.sass */
+/* line 246, sass/partials/_general.sass */
 .logo-opening .logo-animated .st3 {
   stroke-dasharray: 520;
   -webkit-animation: lineC 1.5s ease-in-out , fillIn 1s linear;
           animation: lineC 1.5s ease-in-out , fillIn 1s linear;
 }
 
-/* line 232, sass/partials/_general.sass */
+/* line 250, sass/partials/_general.sass */
 .logo-opening .logo-animated .st2,
 .logo-opening .logo-animated .st3 {
   stroke: #AFDD22;
@@ -534,7 +557,7 @@ header .menu ul li a:hover span {
           animation-delay: 0s , 1.6s;
 }
 
-/* line 240, sass/partials/_general.sass */
+/* line 258, sass/partials/_general.sass */
 .logo-opening h1.title {
   color: #FFF;
   font-family: "Josefin Sans", sans-serif;
@@ -543,14 +566,14 @@ header .menu ul li a:hover span {
   text-align: center;
   display: block;
   margin-top: 1.5625vw;
-  font-size: 2.65625vw;
+  font-size: 2.5vw;
   letter-spacing: 0.15625vw;
   opacity: 0.5;
   border-bottom: 1px solid #FFF;
   padding-bottom: 0.52083vw;
 }
 
-/* line 254, sass/partials/_general.sass */
+/* line 272, sass/partials/_general.sass */
 .logo-opening h2.subtitle {
   color: #FFF;
   font-family: "Josefin Sans", sans-serif;
@@ -559,12 +582,12 @@ header .menu ul li a:hover span {
   text-align: center;
   display: block;
   margin-top: 0.78125vw;
-  font-size: 1.5625vw;
+  font-size: 1.45833vw;
   letter-spacing: 0.42188vw;
   opacity: 0.5;
 }
 
-/* line 270, sass/partials/_general.sass */
+/* line 288, sass/partials/_general.sass */
 .pages .page {
   width: 100vw;
   height: 100vh;
@@ -578,18 +601,18 @@ header .menu ul li a:hover span {
   transition: all 250ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
 }
 
-/* line 280, sass/partials/_general.sass */
+/* line 298, sass/partials/_general.sass */
 .pages .page.active {
   left: 0%;
 }
 
-/* line 282, sass/partials/_general.sass */
+/* line 300, sass/partials/_general.sass */
 .pages .page p {
   color: #FFF;
   font-weight: 300;
 }
 
-/* line 287, sass/partials/_general.sass */
+/* line 305, sass/partials/_general.sass */
 #particles-js {
   position: fixed;
   width: 100%;
