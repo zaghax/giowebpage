@@ -195,19 +195,68 @@ header
 	position: absolute
 	top: 10px
 	right: 15px
+	z-index: 2
 	ul
 		li
+			display: inline-block
 			a
 				width: toVW(80)
 				height: toVW(80)
 				padding: toVW(10)
 				display: block
-				svg
-					path
-						fill: none
-						stroke: $green
-						stroke-width: 20px
-						stroke-linecap: round
+				cursor: pointer
+				position: relative
+				.social-in,
+				.social-face
+					fill: none
+					stroke: $green
+					stroke-width: 4px
+					stroke-linecap: round
+				.social-in
+					.l1
+						stroke-dasharray: 91px
+						+transition(200ms)
+					.l2
+						stroke-dasharray: 150px
+						+transition(200ms)
+					.l3
+						stroke-dasharray: 1015px
+						+transition(200ms)
+
+				.social-face
+					.f1
+						stroke-dasharray: 1054px
+						+transition(200ms)
+				span
+					opacity: 0
+					color: $green
+					font-size: toVW(16)
+					line-height: 1
+					display: block
+					width: 100%
+					text-align: center
+					font-weight: 600
+					position: absolute
+					z-index: 0
+					top: calc(50% - 8px)
+					left: 0
+					+transition(300ms)
+
+				&:hover
+					.social-in
+						.l1
+							stroke-dashoffset: 91px
+						.l2
+							stroke-dashoffset: 150px
+						.l3
+							stroke-dashoffset: 1015px
+					.social-face
+						.f1
+							stroke-dashoffset: 1051px
+					span
+						opacity: 1
+
+
 
 .logo-opening
 	perspective: toVW(400)
